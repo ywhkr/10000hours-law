@@ -1,0 +1,468 @@
+@font-face {
+  font-family: 'OTEnjoystoriesBA';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GmarketSansBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2')
+      format('woff2'),
+    url('https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff')
+      format('woff'),
+    url('https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf')
+      format('opentype');
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'GmarketSansMedium';
+  background-color: #5b2386;
+  color: #fff;
+}
+
+.sr-only {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+}
+
+button {
+  cursor: pointer;
+}
+
+/* header */
+.background-img {
+  width: 221px;
+  height: 225px;
+  display: block;
+  position: relative;
+  margin: 140px auto 66px;
+}
+
+.title-img {
+  position: absolute;
+  width: 564px;
+  top: 190px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* intro section */
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-title {
+  font-family: tvN Enjoystories;
+  font-size: 36px;
+  font-weight: 700;
+  color: #f5df4d;
+  margin-bottom: 78px;
+}
+
+.intro-main {
+  position: relative;
+  width: 373px;
+  height: 85px;
+  text-align: center;
+  margin-bottom: 80px;
+  line-height: 24px;
+}
+
+.intro-main span {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.intro-main::before,
+.intro-main::after {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 37px;
+  height: 32px;
+  top: 50%;
+  margin: -50px -20px;
+}
+
+.intro-main::before {
+  background-image: url(../img/txt-left.png);
+  left: 0px;
+}
+
+.intro-main::after {
+  background-image: url(../img/txt-right.png);
+  right: 0px;
+}
+
+/* form */
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 115px;
+}
+
+form p {
+  margin-bottom: 27px;
+  font-size: 24px;
+}
+
+.input {
+  width: 228px;
+  height: 57px;
+  border-radius: 7px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.input::placeholder {
+  color: #babcbe;
+}
+
+/* question */
+.question {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 147px;
+}
+
+.yellow-btn,
+.modal-btn,
+.share-btn,
+.close-btn {
+  background: #fcee21;
+  width: 581px;
+  height: 66px;
+  padding: 21px 49px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 56px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+  color: #5b2386;
+}
+
+/* days section */
+.days {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 127px;
+}
+
+.days p {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 17px;
+  letter-spacing: 0.05cm;
+}
+
+.days strong {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 72px;
+  vertical-align: middle;
+}
+
+/* go section */
+.go {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 136px;
+}
+
+.modal-btn {
+  width: 356px;
+  height: 66px;
+  margin-right: 18px;
+}
+
+.share-btn {
+  width: 195px;
+  height: 66px;
+  border-radius: 56px;
+  background: #fff;
+}
+
+/* modal */
+#modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  height: 800px;
+  z-index: 999;
+  border-radius: 30px;
+  background: #fff;
+  color: #5b2386;
+}
+
+#modal header {
+  text-align: center;
+  font-family: 'OTEnjoystoriesBA';
+  margin-top: 100px;
+}
+
+#modal header h1 {
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 105px;
+}
+
+#modal header span {
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 73px;
+}
+
+#modal img {
+  display: block;
+  margin: 0 auto;
+  width: 433px;
+  height: 337px;
+  margin-bottom: 88px;
+}
+
+.close-btn {
+  display: block;
+  margin: 0 auto 80px;
+}
+
+/* footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 116px;
+  text-align: center;
+}
+
+.logo {
+  margin-bottom: 20px;
+}
+
+footer p {
+  color: rgba(255, 255, 255, 0.7);
+}
+/* js 작동용 */
+.loading {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+@media screen and (max-width: 394px) {
+  /* header */
+  body {
+    height: 1176px;
+  }
+
+  .background-img {
+    width: 125px;
+    height: 126px;
+    margin-top: 59px;
+    margin-bottom: 49px;
+  }
+
+  .title-img {
+    width: 267px;
+    height: 53px;
+    top: 95px;
+  }
+  /* intro section */
+  .intro-title {
+    width: 297px;
+    height: 24px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 24px;
+  }
+
+  .intro-main {
+    width: 290px;
+    height: 68px;
+    font-size: 16px;
+  }
+
+  .intro-main span {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .intro-main::before,
+  .intro-main::after {
+    width: 18px;
+    height: 15px;
+    background-size: 18px 15px;
+    margin: -15px;
+  }
+
+  /* form */
+  form {
+    margin-bottom: 50px;
+  }
+  form p {
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+  }
+
+  .input {
+    width: 156px;
+    height: 37px;
+    font-size: 14px;
+    color: #babcbe;
+  }
+
+  /* question */
+
+  .question {
+    margin-bottom: 64px;
+  }
+
+  .yellow-btn {
+    width: 241px;
+    height: 68px;
+    font-size: 14px;
+    line-height: 14px;
+    border-radius: 10px;
+    padding: 19px 35px 17px;
+  }
+
+  /* days section */
+  .days {
+    margin-bottom: 55px;
+  }
+
+  .days p {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: -30px;
+  }
+
+  .days strong {
+    font-size: 24px;
+  }
+
+  /* go section */
+  .go {
+    margin-bottom: 87px;
+  }
+
+  .modal-btn {
+    width: 186px;
+    height: 40px;
+    margin-right: 13px;
+    font-size: 14px;
+    line-height: 14px;
+    padding: 0;
+  }
+
+  .share-btn {
+    width: 92px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 14px;
+    padding: 0;
+  }
+
+  /* modal */
+  #modal {
+    width: 433px;
+    height: 554px;
+    justify-content: space-between;
+  }
+
+  #modal header {
+    margin-top: 64px;
+  }
+
+  #modal header h1 {
+    font-size: 64px;
+    line-height: 70px;
+  }
+
+  #modal header span {
+    font-size: 36px;
+    margin-bottom: 246px;
+  }
+
+  #modal img {
+    display: none;
+  }
+
+  .close-btn {
+    width: 241px;
+    height: 68px;
+    border-radius: 13px;
+    padding: 23px 49px 21px;
+    font-size: 14px;
+    line-height: 14px;
+  }
+  /* footer */
+  footer {
+    padding-bottom: 56px;
+  }
+
+  .logo {
+    width: 91px;
+    height: 18px;
+    margin-bottom: 17px;
+  }
+
+  footer p {
+    font-size: 9px;
+    line-height: 13px;
+  }
+}
